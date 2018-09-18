@@ -26,4 +26,4 @@
 
 ## Aula do dia 17/09/2018
 
-[Update de dados com botão] (d3_update/01_scattrerplot.html)<br>
+[Update de dados com botão] (d3_update/01_scatterplot.html)<br>
