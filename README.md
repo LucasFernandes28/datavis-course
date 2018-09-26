@@ -27,3 +27,8 @@
 ## Aula do dia 17/09/2018
 
 [Update de dados com botão](d3_update/01_scatterplot.html)<br>
+
+## Aula do dia 24/09/2018
+
+[Ações do Facebook e Tesla](d3_crossfilter/acoes.html)<br>
+[Comparação de Filmes](d3_crossfilter/movies_d3_dc.html)<br>
