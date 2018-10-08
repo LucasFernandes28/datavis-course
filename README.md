@@ -42,3 +42,9 @@
 [Earthquakes Data](d3_crossfilter_2/earthquakes.html)<br>
 
 --
+
+## Aula do dia 03/10/2018
+
+[Crimes de Chicago](d3_crossfilter_3/chicago.html)<br>
+
+--

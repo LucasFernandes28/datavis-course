@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+	<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+		integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+		crossorigin=""></script>
+	
     <title> Earthquake Data</title>
 
     <!-- Custom styles for this template -->
@@ -28,14 +33,17 @@
 	    </div>
 	    <div id='depth-chart' class="col-6">
 		  <h4> Eventos por Profundidade (km) </h4>
-	    </div>   
-    </div>
-    <div class='row'>
+	    </div>  
+		<div id="mapid" class="col-6">
+		</div>
+	</div>
+	<div class='row'>
       <div id='time-chart' class="single-col">
          <h4> Eventos por hora </h4>
       </div>
 
 	</div>
+	
 	<table class="table table-hover" id="dc-table-graph">
         <thead>
             <tr class="header">
@@ -58,18 +66,30 @@
 	
 	// load data from a csv file
 	d3.csv("data/earthquakes.csv").then(function (data) {
+	
+	let map=L.map('mapid').setView([-41.05,172.93], 5);
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',{attribution: '&copy; <a href="http://www.openstreetmap.org/">OpenStreetMap</a>contributors',maxZoom: 17}).addTo(map);
 
 	  // format our data
 	  	let dateParse = d3.utcParse("%Y-%m-%dT%H:%M:%S");
         let magnitudeFormat = d3.format(".1f");
         let profundFormat = d3.format("d");
+		
+
 
 	    data.forEach(function(d){
 	        d.dtg = dateParse(d.origintime.substr(0,19));
 	        d.magnitude = magnitudeFormat(+d.magnitude);
 	        d.profundidade = profundFormat(+d.depth);
-	    });
+			let circle = L.circle([d.latitude, d.longitude],10000,{
+				color: '#fd8d3c',
+				weight: 2,
+				fillColor: '#fecc5c',
+				fillOpacity: 0.5
+			}).addTo(map);
+				circle.bindPopup("Magnitude: " + d.magnitude + ', Profundidade: ' + d.profundidade);
 
+		});
 
 	  // Run the data through crossfilter and load our 'facts'
 	    let facts = crossfilter(data);
