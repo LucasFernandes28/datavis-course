@@ -48,3 +48,10 @@
 [Crimes de Chicago](d3_crossfilter_3/chicago.html)<br>
 
 --
+
+## Aula do dia 10/10/2018
+
+[Musicas](d3_networks_trees/songs.html)<br>
+[Le Miserables](d3_networks_trees/songs.html)<br>
+
+--
