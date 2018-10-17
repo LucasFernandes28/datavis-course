@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Verdana, sans-serif;
 }
 
 a, a:visited {
@@ -63,8 +63,12 @@ footer p {
 
 line.link {
   fill: none;
-  stroke: #ddd;
-  stroke-opacity: 0.8;
-  stroke-width: 1.5px;
+  stroke: #999;
+  stroke-width: 2px;
+}
+
+circle.node {
+  border: 1px;
+
 }
 

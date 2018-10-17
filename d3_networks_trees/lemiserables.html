@@ -3,33 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Similar Songs Network</title>
+    <title> Les Miserables </title>
     
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleLM.css">
     <script src="https://d3js.org/d3.v5.min.js"></script>
   </head>
   <body>
     <main role="main" class="container">
       <header>
-      <h1>Similar Song Network</h1>
-      <p>Songs similar to one another according to <a href="http://www.last.fm/api">last.fm</a> are linked together. Song nodes are sized based on playcounts, and colored by artist.</p>
+      <h1>Les Miserables</h1>
+      <p></p>
       </header>
       <div id="main" role="main">
         <div id="vis"></div>
       </div>
-      <footer>
-      <p>Data from <a href="http://www.last.fm/api/show/track.getSimilar">last.fm</a>. Some songs include additional links for effect.<br/>Popular songs are defined as those with playcounts above the median for all songs in network. This example is a simpler version of the <a href="http://flowingdata.com/2012/08/02/how-to-make-an-interactive-network-visualization/">tutorial</a> by <a href="http://vallandingham.me/">Jim Vallandingham</a>.</p>
-
-      </footer>
     </main> <!--! end of #container -->
     <!-- Bootstrap javascript files -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
     <script>
         const width = 960;
         const height = 800;
@@ -44,7 +39,7 @@
 
         // Read the contents of data/songs.json file and process it as a graph variable
 
-        d3.json("data/songs.json").then(function(graph) {
+        d3.json("data/lesmiserables.json").then(function(graph) {
 
            // Set the nodes and links
 
@@ -56,9 +51,10 @@
 
            // create simulation constant using the forceSimulation function defined down below
 
-           let color = d3.scaleOrdinal(d3.schemeCategory10);
+          let color = d3.scaleOrdinal(d3.schemeCategory10);
 
-           // create link svg elements
+
+           // ----------------------------------  create link svg elements  ----------------------------------
 
            const link = vis.append("g")
            .selectAll("line")
@@ -67,13 +63,14 @@
            .append("line")
            .attr("class", "link");
 
-           // create node svg elements
+           // ----------------------------------  create node svg elements  ----------------------------------
+
            const countExtent = d3.extent(nodes, function(d){
-           	return d.playcount;
+           	return connections(d);
            });
 
            let circleRadius = d3.scaleSqrt()
-           						.range([2,20])
+           						.range([10,20])
            						.domain(countExtent);
 
            const node = vis.append("g")
@@ -81,19 +78,19 @@
            .data(nodes)
            .enter()
            .append("circle")
-           .attr("fill", function(d) { return color(d.artist); })
+           .attr("fill", function(d) { return color(d.group); })
            .attr("r", function(d){
-           	return circleRadius(d.playcount);
+           	return circleRadius(connections(d) * 2);
            })
            .call(drag(simulation))
            .attr("class", "node");
 
            node.append("title")
            		.text(function(d){
-           			return d.artist + ": " + d.name;
+           			return "Ator: " + d.id + " | Conexões: " + connections(d);
            		});
 
-           // define function ticked
+           // ----------------------------------  define function ticked  ----------------------------------
 
            function ticked() {
            	link.attr("x1", d => d.source.x)
@@ -138,7 +135,19 @@
 			.force("link", d3.forceLink(links).id(d => d.id).distance(50))
 			.force("charge", d3.forceManyBody().strength(-50).distanceMax(270))
 			.force("center", d3.forceCenter());
-		} 
+		}
+    function connections(nodes){
+      let count = 0;
+      links.forEach(function(link){
+        if(nodes.id == link.source.id){
+          count++;
+        }
+        if(nodes.id == link.target.id){
+          count++;
+        }
+      })
+      return count;
+    } 
 	});
     </script>
   </body>
