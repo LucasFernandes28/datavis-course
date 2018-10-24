@@ -55,3 +55,10 @@
 [Le Miserables](d3_networks_trees/lemiserables.html)<br>
 
 --
+
+## Aula do dia 22/10/2018
+
+[USA](color-d3/usa.html)<br>
+[Crimes](color-d3/crimes.html)<br>
+
+--
