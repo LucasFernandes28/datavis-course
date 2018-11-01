@@ -62,3 +62,10 @@
 [Crimes](color-d3/crimes.html)<br>
 
 --
+
+## Aula do dia 31/10/2018
+
+[USA](d3_interactive/usa.html)<br>
+[Earthquakes](d3_interactive/earthquakes.html)<br>
+
+--
