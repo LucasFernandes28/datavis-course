@@ -69,3 +69,9 @@
 [Earthquakes](d3_interactive/earthquakes.html)<br>
 
 --
+
+## Projeto Final - Fortaleza Vota
+
+[USA](projeto_final/fortalvota.html)<br>
+
+--
