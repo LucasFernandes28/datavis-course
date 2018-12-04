@@ -1,0 +1,874 @@
+[
+  {
+    "zona": 1,
+    "qtdsecoes": 305,
+    "qtdsecoesagr": 1,
+    "totalsecoes": 306,
+    "totaleleitores": 117517,
+    "totallocaisvotacao": 33
+  },
+  {
+    "zona": 2,
+    "qtdsecoes": 284,
+    "qtdsecoesagr": 1,
+    "totalsecoes": 285,
+    "totaleleitores": 104248,
+    "totallocaisvotacao": 30
+  },
+  {
+    "zona": 3,
+    "qtdsecoes": 321,
+    "qtdsecoesagr": 78,
+    "totalsecoes": 399,
+    "totaleleitores": 117879,
+    "totallocaisvotacao": 42
+  },
+  {
+    "zona": 4,
+    "qtdsecoes": 297,
+    "qtdsecoesagr": 28,
+    "totalsecoes": 325,
+    "totaleleitores": 81823,
+    "totallocaisvotacao": 95
+  },
+  {
+    "zona": 5,
+    "qtdsecoes": 172,
+    "qtdsecoesagr": 42,
+    "totalsecoes": 214,
+    "totaleleitores": 47892,
+    "totallocaisvotacao": 73
+  },
+  {
+    "zona": 6,
+    "qtdsecoes": 337,
+    "qtdsecoesagr": 26,
+    "totalsecoes": 363,
+    "totaleleitores": 89339,
+    "totallocaisvotacao": 152
+  },
+  {
+    "zona": 7,
+    "qtdsecoes": 257,
+    "qtdsecoesagr": 19,
+    "totalsecoes": 276,
+    "totaleleitores": 68408,
+    "totallocaisvotacao": 95
+  },
+  {
+    "zona": 8,
+    "qtdsecoes": 290,
+    "qtdsecoesagr": 25,
+    "totalsecoes": 315,
+    "totaleleitores": 78305,
+    "totallocaisvotacao": 119
+  },
+  {
+    "zona": 9,
+    "qtdsecoes": 219,
+    "qtdsecoesagr": 13,
+    "totalsecoes": 232,
+    "totaleleitores": 61417,
+    "totallocaisvotacao": 79
+  },
+  {
+    "zona": 10,
+    "qtdsecoes": 169,
+    "qtdsecoesagr": 22,
+    "totalsecoes": 191,
+    "totaleleitores": 47326,
+    "totallocaisvotacao": 56
+  },
+  {
+    "zona": 11,
+    "qtdsecoes": 201,
+    "qtdsecoesagr": 51,
+    "totalsecoes": 252,
+    "totaleleitores": 56458,
+    "totallocaisvotacao": 92
+  },
+  {
+    "zona": 12,
+    "qtdsecoes": 117,
+    "qtdsecoesagr": 55,
+    "totalsecoes": 172,
+    "totaleleitores": 32479,
+    "totallocaisvotacao": 67
+  },
+  {
+    "zona": 13,
+    "qtdsecoes": 358,
+    "qtdsecoesagr": 81,
+    "totalsecoes": 439,
+    "totaleleitores": 95219,
+    "totallocaisvotacao": 157
+  },
+  {
+    "zona": 14,
+    "qtdsecoes": 76,
+    "qtdsecoesagr": 37,
+    "totalsecoes": 113,
+    "totaleleitores": 21836,
+    "totallocaisvotacao": 26
+  },
+  {
+    "zona": 15,
+    "qtdsecoes": 267,
+    "qtdsecoesagr": 56,
+    "totalsecoes": 323,
+    "totaleleitores": 71424,
+    "totallocaisvotacao": 86
+  },
+  {
+    "zona": 16,
+    "qtdsecoes": 94,
+    "qtdsecoesagr": 19,
+    "totalsecoes": 113,
+    "totaleleitores": 26738,
+    "totallocaisvotacao": 36
+  },
+  {
+    "zona": 17,
+    "qtdsecoes": 351,
+    "qtdsecoesagr": 36,
+    "totalsecoes": 387,
+    "totaleleitores": 96426,
+    "totallocaisvotacao": 119
+  },
+  {
+    "zona": 18,
+    "qtdsecoes": 129,
+    "qtdsecoesagr": 31,
+    "totalsecoes": 160,
+    "totaleleitores": 33699,
+    "totallocaisvotacao": 55
+  },
+  {
+    "zona": 19,
+    "qtdsecoes": 281,
+    "qtdsecoesagr": 63,
+    "totalsecoes": 344,
+    "totaleleitores": 73697,
+    "totallocaisvotacao": 153
+  },
+  {
+    "zona": 20,
+    "qtdsecoes": 227,
+    "qtdsecoesagr": 87,
+    "totalsecoes": 314,
+    "totaleleitores": 63626,
+    "totallocaisvotacao": 101
+  },
+  {
+    "zona": 21,
+    "qtdsecoes": 146,
+    "qtdsecoesagr": 26,
+    "totalsecoes": 172,
+    "totaleleitores": 41573,
+    "totallocaisvotacao": 68
+  },
+  {
+    "zona": 22,
+    "qtdsecoes": 172,
+    "qtdsecoesagr": 35,
+    "totalsecoes": 207,
+    "totaleleitores": 45346,
+    "totallocaisvotacao": 72
+  },
+  {
+    "zona": 23,
+    "qtdsecoes": 150,
+    "qtdsecoesagr": 23,
+    "totalsecoes": 173,
+    "totaleleitores": 40490,
+    "totallocaisvotacao": 48
+  },
+  {
+    "zona": 24,
+    "qtdsecoes": 321,
+    "qtdsecoesagr": 27,
+    "totalsecoes": 348,
+    "totaleleitores": 97072,
+    "totallocaisvotacao": 83
+  },
+  {
+    "zona": 25,
+    "qtdsecoes": 219,
+    "qtdsecoesagr": 7,
+    "totalsecoes": 226,
+    "totaleleitores": 57597,
+    "totallocaisvotacao": 80
+  },
+  {
+    "zona": 26,
+    "qtdsecoes": 116,
+    "qtdsecoesagr": 10,
+    "totalsecoes": 126,
+    "totaleleitores": 27611,
+    "totallocaisvotacao": 58
+  },
+  {
+    "zona": 27,
+    "qtdsecoes": 299,
+    "qtdsecoesagr": 45,
+    "totalsecoes": 344,
+    "totaleleitores": 83053,
+    "totallocaisvotacao": 93
+  },
+  {
+    "zona": 28,
+    "qtdsecoes": 253,
+    "qtdsecoesagr": 33,
+    "totalsecoes": 286,
+    "totaleleitores": 74942,
+    "totallocaisvotacao": 51
+  },
+  {
+    "zona": 29,
+    "qtdsecoes": 213,
+    "qtdsecoesagr": 15,
+    "totalsecoes": 228,
+    "totaleleitores": 58777,
+    "totallocaisvotacao": 85
+  },
+  {
+    "zona": 30,
+    "qtdsecoes": 262,
+    "qtdsecoesagr": 39,
+    "totalsecoes": 301,
+    "totaleleitores": 71549,
+    "totallocaisvotacao": 86
+  },
+  {
+    "zona": 31,
+    "qtdsecoes": 137,
+    "qtdsecoesagr": 13,
+    "totalsecoes": 150,
+    "totaleleitores": 43229,
+    "totallocaisvotacao": 36
+  },
+  {
+    "zona": 32,
+    "qtdsecoes": 160,
+    "qtdsecoesagr": 14,
+    "totalsecoes": 174,
+    "totaleleitores": 43879,
+    "totallocaisvotacao": 73
+  },
+  {
+    "zona": 33,
+    "qtdsecoes": 287,
+    "qtdsecoesagr": 19,
+    "totalsecoes": 306,
+    "totaleleitores": 70346,
+    "totallocaisvotacao": 107
+  },
+  {
+    "zona": 35,
+    "qtdsecoes": 150,
+    "qtdsecoesagr": 18,
+    "totalsecoes": 168,
+    "totaleleitores": 42110,
+    "totallocaisvotacao": 62
+  },
+  {
+    "zona": 36,
+    "qtdsecoes": 143,
+    "qtdsecoesagr": 8,
+    "totalsecoes": 151,
+    "totaleleitores": 40187,
+    "totallocaisvotacao": 41
+  },
+  {
+    "zona": 37,
+    "qtdsecoes": 264,
+    "qtdsecoesagr": 23,
+    "totalsecoes": 287,
+    "totaleleitores": 79409,
+    "totallocaisvotacao": 51
+  },
+  {
+    "zona": 38,
+    "qtdsecoes": 119,
+    "qtdsecoesagr": 48,
+    "totalsecoes": 167,
+    "totaleleitores": 34178,
+    "totallocaisvotacao": 67
+  },
+  {
+    "zona": 39,
+    "qtdsecoes": 95,
+    "qtdsecoesagr": 16,
+    "totalsecoes": 111,
+    "totaleleitores": 21756,
+    "totallocaisvotacao": 63
+  },
+  {
+    "zona": 40,
+    "qtdsecoes": 168,
+    "qtdsecoesagr": 34,
+    "totalsecoes": 202,
+    "totaleleitores": 43141,
+    "totallocaisvotacao": 95
+  },
+  {
+    "zona": 41,
+    "qtdsecoes": 255,
+    "qtdsecoesagr": 25,
+    "totalsecoes": 280,
+    "totaleleitores": 65543,
+    "totallocaisvotacao": 82
+  },
+  {
+    "zona": 43,
+    "qtdsecoes": 175,
+    "qtdsecoesagr": 46,
+    "totalsecoes": 221,
+    "totaleleitores": 45923,
+    "totallocaisvotacao": 77
+  },
+  {
+    "zona": 44,
+    "qtdsecoes": 157,
+    "qtdsecoesagr": 27,
+    "totalsecoes": 184,
+    "totaleleitores": 41789,
+    "totallocaisvotacao": 89
+  },
+  {
+    "zona": 45,
+    "qtdsecoes": 114,
+    "qtdsecoesagr": 11,
+    "totalsecoes": 125,
+    "totaleleitores": 35694,
+    "totallocaisvotacao": 42
+  },
+  {
+    "zona": 46,
+    "qtdsecoes": 109,
+    "qtdsecoesagr": 45,
+    "totalsecoes": 154,
+    "totaleleitores": 30073,
+    "totallocaisvotacao": 46
+  },
+  {
+    "zona": 47,
+    "qtdsecoes": 231,
+    "qtdsecoesagr": 29,
+    "totalsecoes": 260,
+    "totaleleitores": 61419,
+    "totallocaisvotacao": 81
+  },
+  {
+    "zona": 48,
+    "qtdsecoes": 126,
+    "qtdsecoesagr": 30,
+    "totalsecoes": 156,
+    "totaleleitores": 33093,
+    "totallocaisvotacao": 69
+  },
+  {
+    "zona": 49,
+    "qtdsecoes": 221,
+    "qtdsecoesagr": 19,
+    "totalsecoes": 240,
+    "totaleleitores": 62224,
+    "totallocaisvotacao": 68
+  },
+  {
+    "zona": 50,
+    "qtdsecoes": 182,
+    "qtdsecoesagr": 44,
+    "totalsecoes": 226,
+    "totaleleitores": 48125,
+    "totallocaisvotacao": 76
+  },
+  {
+    "zona": 52,
+    "qtdsecoes": 182,
+    "qtdsecoesagr": 17,
+    "totalsecoes": 199,
+    "totaleleitores": 48704,
+    "totallocaisvotacao": 71
+  },
+  {
+    "zona": 53,
+    "qtdsecoes": 114,
+    "qtdsecoesagr": 9,
+    "totalsecoes": 123,
+    "totaleleitores": 29353,
+    "totallocaisvotacao": 44
+  },
+  {
+    "zona": 54,
+    "qtdsecoes": 198,
+    "qtdsecoesagr": 57,
+    "totalsecoes": 255,
+    "totaleleitores": 52089,
+    "totallocaisvotacao": 87
+  },
+  {
+    "zona": 55,
+    "qtdsecoes": 121,
+    "qtdsecoesagr": 32,
+    "totalsecoes": 153,
+    "totaleleitores": 33589,
+    "totallocaisvotacao": 28
+  },
+  {
+    "zona": 57,
+    "qtdsecoes": 218,
+    "qtdsecoesagr": 1,
+    "totalsecoes": 219,
+    "totaleleitores": 60291,
+    "totallocaisvotacao": 44
+  },
+  {
+    "zona": 59,
+    "qtdsecoes": 133,
+    "qtdsecoesagr": 25,
+    "totalsecoes": 158,
+    "totaleleitores": 31476,
+    "totallocaisvotacao": 73
+  },
+  {
+    "zona": 60,
+    "qtdsecoes": 163,
+    "qtdsecoesagr": 111,
+    "totalsecoes": 274,
+    "totaleleitores": 47034,
+    "totallocaisvotacao": 88
+  },
+  {
+    "zona": 61,
+    "qtdsecoes": 151,
+    "qtdsecoesagr": 22,
+    "totalsecoes": 173,
+    "totaleleitores": 36679,
+    "totallocaisvotacao": 57
+  },
+  {
+    "zona": 62,
+    "qtdsecoes": 178,
+    "qtdsecoesagr": 32,
+    "totalsecoes": 210,
+    "totaleleitores": 49283,
+    "totallocaisvotacao": 66
+  },
+  {
+    "zona": 63,
+    "qtdsecoes": 204,
+    "qtdsecoesagr": 46,
+    "totalsecoes": 250,
+    "totaleleitores": 50174,
+    "totallocaisvotacao": 123
+  },
+  {
+    "zona": 64,
+    "qtdsecoes": 97,
+    "qtdsecoesagr": 27,
+    "totalsecoes": 124,
+    "totaleleitores": 24878,
+    "totallocaisvotacao": 41
+  },
+  {
+    "zona": 65,
+    "qtdsecoes": 136,
+    "qtdsecoesagr": 13,
+    "totalsecoes": 149,
+    "totaleleitores": 37512,
+    "totallocaisvotacao": 65
+  },
+  {
+    "zona": 66,
+    "qtdsecoes": 179,
+    "qtdsecoesagr": 16,
+    "totalsecoes": 195,
+    "totaleleitores": 54863,
+    "totallocaisvotacao": 58
+  },
+  {
+    "zona": 67,
+    "qtdsecoes": 176,
+    "qtdsecoesagr": 13,
+    "totalsecoes": 189,
+    "totaleleitores": 44474,
+    "totallocaisvotacao": 78
+  },
+  {
+    "zona": 68,
+    "qtdsecoes": 102,
+    "qtdsecoesagr": 13,
+    "totalsecoes": 115,
+    "totaleleitores": 25157,
+    "totallocaisvotacao": 49
+  },
+  {
+    "zona": 69,
+    "qtdsecoes": 72,
+    "qtdsecoesagr": 13,
+    "totalsecoes": 85,
+    "totaleleitores": 19080,
+    "totallocaisvotacao": 33
+  },
+  {
+    "zona": 70,
+    "qtdsecoes": 219,
+    "qtdsecoesagr": 33,
+    "totalsecoes": 252,
+    "totaleleitores": 59506,
+    "totallocaisvotacao": 101
+  },
+  {
+    "zona": 71,
+    "qtdsecoes": 85,
+    "qtdsecoesagr": 21,
+    "totalsecoes": 106,
+    "totaleleitores": 21866,
+    "totallocaisvotacao": 49
+  },
+  {
+    "zona": 72,
+    "qtdsecoes": 88,
+    "qtdsecoesagr": 10,
+    "totalsecoes": 98,
+    "totaleleitores": 23419,
+    "totallocaisvotacao": 37
+  },
+  {
+    "zona": 73,
+    "qtdsecoes": 155,
+    "qtdsecoesagr": 28,
+    "totalsecoes": 183,
+    "totaleleitores": 39812,
+    "totallocaisvotacao": 62
+  },
+  {
+    "zona": 74,
+    "qtdsecoes": 160,
+    "qtdsecoesagr": 18,
+    "totalsecoes": 178,
+    "totaleleitores": 42154,
+    "totallocaisvotacao": 56
+  },
+  {
+    "zona": 75,
+    "qtdsecoes": 129,
+    "qtdsecoesagr": 12,
+    "totalsecoes": 141,
+    "totaleleitores": 32667,
+    "totallocaisvotacao": 52
+  },
+  {
+    "zona": 76,
+    "qtdsecoes": 138,
+    "qtdsecoesagr": 23,
+    "totalsecoes": 161,
+    "totaleleitores": 31983,
+    "totallocaisvotacao": 67
+  },
+  {
+    "zona": 78,
+    "qtdsecoes": 256,
+    "qtdsecoesagr": 30,
+    "totalsecoes": 286,
+    "totaleleitores": 79074,
+    "totallocaisvotacao": 56
+  },
+  {
+    "zona": 79,
+    "qtdsecoes": 180,
+    "qtdsecoesagr": 9,
+    "totalsecoes": 189,
+    "totaleleitores": 48999,
+    "totallocaisvotacao": 58
+  },
+  {
+    "zona": 80,
+    "qtdsecoes": 294,
+    "qtdsecoesagr": 6,
+    "totalsecoes": 300,
+    "totaleleitores": 107405,
+    "totallocaisvotacao": 40
+  },
+  {
+    "zona": 81,
+    "qtdsecoes": 220,
+    "qtdsecoesagr": 37,
+    "totalsecoes": 257,
+    "totaleleitores": 62481,
+    "totallocaisvotacao": 78
+  },
+  {
+    "zona": 82,
+    "qtdsecoes": 318,
+    "qtdsecoesagr": 2,
+    "totalsecoes": 320,
+    "totaleleitores": 111070,
+    "totallocaisvotacao": 37
+  },
+  {
+    "zona": 83,
+    "qtdsecoes": 290,
+    "qtdsecoesagr": 2,
+    "totalsecoes": 292,
+    "totaleleitores": 108102,
+    "totallocaisvotacao": 37
+  },
+  {
+    "zona": 84,
+    "qtdsecoes": 152,
+    "qtdsecoesagr": 4,
+    "totalsecoes": 156,
+    "totaleleitores": 42450,
+    "totallocaisvotacao": 66
+  },
+  {
+    "zona": 85,
+    "qtdsecoes": 282,
+    "qtdsecoesagr": 2,
+    "totalsecoes": 284,
+    "totaleleitores": 98391,
+    "totallocaisvotacao": 36
+  },
+  {
+    "zona": 86,
+    "qtdsecoes": 110,
+    "qtdsecoesagr": 10,
+    "totalsecoes": 120,
+    "totaleleitores": 29484,
+    "totallocaisvotacao": 45
+  },
+  {
+    "zona": 88,
+    "qtdsecoes": 128,
+    "qtdsecoesagr": 6,
+    "totalsecoes": 134,
+    "totaleleitores": 41868,
+    "totallocaisvotacao": 32
+  },
+  {
+    "zona": 89,
+    "qtdsecoes": 158,
+    "qtdsecoesagr": 9,
+    "totalsecoes": 167,
+    "totaleleitores": 40665,
+    "totallocaisvotacao": 73
+  },
+  {
+    "zona": 91,
+    "qtdsecoes": 112,
+    "qtdsecoesagr": 31,
+    "totalsecoes": 143,
+    "totaleleitores": 32359,
+    "totallocaisvotacao": 53
+  },
+  {
+    "zona": 92,
+    "qtdsecoes": 116,
+    "qtdsecoesagr": 21,
+    "totalsecoes": 137,
+    "totaleleitores": 30443,
+    "totallocaisvotacao": 44
+  },
+  {
+    "zona": 93,
+    "qtdsecoes": 201,
+    "qtdsecoesagr": 1,
+    "totalsecoes": 202,
+    "totaleleitores": 78082,
+    "totallocaisvotacao": 28
+  },
+  {
+    "zona": 94,
+    "qtdsecoes": 321,
+    "qtdsecoesagr": 7,
+    "totalsecoes": 328,
+    "totaleleitores": 106424,
+    "totallocaisvotacao": 44
+  },
+  {
+    "zona": 95,
+    "qtdsecoes": 238,
+    "qtdsecoesagr": 12,
+    "totalsecoes": 250,
+    "totaleleitores": 90527,
+    "totallocaisvotacao": 32
+  },
+  {
+    "zona": 96,
+    "qtdsecoes": 148,
+    "qtdsecoesagr": 30,
+    "totalsecoes": 178,
+    "totaleleitores": 39917,
+    "totallocaisvotacao": 67
+  },
+  {
+    "zona": 97,
+    "qtdsecoes": 151,
+    "qtdsecoesagr": 21,
+    "totalsecoes": 172,
+    "totaleleitores": 40353,
+    "totallocaisvotacao": 72
+  },
+  {
+    "zona": 98,
+    "qtdsecoes": 99,
+    "qtdsecoesagr": 7,
+    "totalsecoes": 106,
+    "totaleleitores": 29046,
+    "totallocaisvotacao": 34
+  },
+  {
+    "zona": 99,
+    "qtdsecoes": 146,
+    "qtdsecoesagr": 11,
+    "totalsecoes": 157,
+    "totaleleitores": 39248,
+    "totallocaisvotacao": 51
+  },
+  {
+    "zona": 101,
+    "qtdsecoes": 70,
+    "qtdsecoesagr": 11,
+    "totalsecoes": 81,
+    "totaleleitores": 18235,
+    "totallocaisvotacao": 26
+  },
+  {
+    "zona": 104,
+    "qtdsecoes": 229,
+    "qtdsecoesagr": 0,
+    "totalsecoes": 229,
+    "totaleleitores": 76062,
+    "totallocaisvotacao": 28
+  },
+  {
+    "zona": 105,
+    "qtdsecoes": 144,
+    "qtdsecoesagr": 17,
+    "totalsecoes": 161,
+    "totaleleitores": 39875,
+    "totallocaisvotacao": 62
+  },
+  {
+    "zona": 108,
+    "qtdsecoes": 81,
+    "qtdsecoesagr": 12,
+    "totalsecoes": 93,
+    "totaleleitores": 22017,
+    "totallocaisvotacao": 29
+  },
+  {
+    "zona": 109,
+    "qtdsecoes": 191,
+    "qtdsecoesagr": 5,
+    "totalsecoes": 196,
+    "totaleleitores": 51649,
+    "totallocaisvotacao": 50
+  },
+  {
+    "zona": 111,
+    "qtdsecoes": 97,
+    "qtdsecoesagr": 18,
+    "totalsecoes": 115,
+    "totaleleitores": 24271,
+    "totallocaisvotacao": 46
+  },
+  {
+    "zona": 112,
+    "qtdsecoes": 274,
+    "qtdsecoesagr": 0,
+    "totalsecoes": 274,
+    "totaleleitores": 102945,
+    "totallocaisvotacao": 27
+  },
+  {
+    "zona": 113,
+    "qtdsecoes": 361,
+    "qtdsecoesagr": 23,
+    "totalsecoes": 384,
+    "totaleleitores": 120262,
+    "totallocaisvotacao": 49
+  },
+  {
+    "zona": 114,
+    "qtdsecoes": 279,
+    "qtdsecoesagr": 1,
+    "totalsecoes": 280,
+    "totaleleitores": 104260,
+    "totallocaisvotacao": 43
+  },
+  {
+    "zona": 115,
+    "qtdsecoes": 324,
+    "qtdsecoesagr": 17,
+    "totalsecoes": 341,
+    "totaleleitores": 116001,
+    "totallocaisvotacao": 36
+  },
+  {
+    "zona": 116,
+    "qtdsecoes": 294,
+    "qtdsecoesagr": 4,
+    "totalsecoes": 298,
+    "totaleleitores": 107368,
+    "totallocaisvotacao": 42
+  },
+  {
+    "zona": 117,
+    "qtdsecoes": 252,
+    "qtdsecoesagr": 2,
+    "totalsecoes": 254,
+    "totaleleitores": 96206,
+    "totallocaisvotacao": 34
+  },
+  {
+    "zona": 118,
+    "qtdsecoes": 232,
+    "qtdsecoesagr": 2,
+    "totalsecoes": 234,
+    "totaleleitores": 89439,
+    "totallocaisvotacao": 31
+  },
+  {
+    "zona": 119,
+    "qtdsecoes": 362,
+    "qtdsecoesagr": 17,
+    "totalsecoes": 379,
+    "totaleleitores": 114249,
+    "totallocaisvotacao": 65
+  },
+  {
+    "zona": 120,
+    "qtdsecoes": 170,
+    "qtdsecoesagr": 15,
+    "totalsecoes": 185,
+    "totaleleitores": 48994,
+    "totallocaisvotacao": 43
+  },
+  {
+    "zona": 121,
+    "qtdsecoes": 267,
+    "qtdsecoesagr": 46,
+    "totalsecoes": 313,
+    "totaleleitores": 77782,
+    "totallocaisvotacao": 63
+  },
+  {
+    "zona": 122,
+    "qtdsecoes": 236,
+    "qtdsecoesagr": 15,
+    "totalsecoes": 251,
+    "totaleleitores": 75171,
+    "totallocaisvotacao": 41
+  },
+  {
+    "zona": 123,
+    "qtdsecoes": 272,
+    "qtdsecoesagr": 4,
+    "totalsecoes": 276,
+    "totaleleitores": 80747,
+    "totallocaisvotacao": 28
+  }
+]

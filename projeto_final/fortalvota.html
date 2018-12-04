@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+   <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+   integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+   crossorigin=""></script>
+    <title> Vota Fortaleza </title>
+             
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/dc.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/crossfilter.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="js/dc.min.js"></script>
+    <script type="text/javascript" src="data/bairros.js"></script>
+</head>
+
+
+<body>
+  <main>
+    <div class="single-col">
+      <h1> Vota Fortaleza </h1>
+    </div>
+
+    <div>
+      <div id='mapid' class="single-col">
+        <strong>Mapa das Zonas Eleitorais</strong>
+      </div>
+      </br></br>
+
+      <div id='bairro-chart' class="single-col">
+        <h4> Zonas por Bairro</h4>
+                      <span>
+              <a class="reset"
+              href="javascript:bairroChart.filterAll();dc.redrawAll();"
+              style="display: none;"> reset
+              </a>
+              </span>
+      </div>
+
+      <div id='eleitores-chart' class="single-col">
+        <h4> Eleitores por Bairro</h4>
+                      <span>
+              <a class="reset"
+              href="javascript:eleitorChart.filterAll();dc.redrawAll();"
+              style="display: none;"> reset
+              </a>
+              </span>
+      </div>
+
+      <div id='eleitores-chart2' class="single-col">
+        <h4> Eleitores por Zona</h4>
+                      <span>
+              <a class="reset"
+              href="javascript:eleitor2Chart.filterAll();dc.redrawAll();"
+              style="display: none;"> reset
+              </a>
+              </span>
+      </div>
+
+      <div id='eleitores-chart3' class="single-col">
+        <h4> Eleitores por Seção</h4>
+                      <span>
+              <a class="reset"
+              href="javascript:eleitor3Chart.filterAll();dc.redrawAll();"
+              style="display: none;"> reset
+              </a>
+              </span>
+      </div>
+
+    </div>
+
+    <br><br>
+
+    <div>
+      <table class="table table-hover" id="dc-table-graph">
+        <thead>
+            <tr class="header">
+              <th>Seção</th>
+              <th>Zona</th>
+              <th>Endereço</th>
+              <th>Local de Votação</th>
+              <th>Bairro</th>
+              <th>Aptos</th>
+            </tr>
+        </thead>
+    </table>
+
+    </div>
+
+  </main>
+    <script type="text/javascript">
+
+       let dataTable = dc.dataTable("#dc-table-graph");
+       let bairroChart = dc.barChart("#bairro-chart");
+       let eleitorChart = dc.barChart("#eleitores-chart");
+       let eleitor2Chart = dc.barChart("#eleitores-chart2");
+       let eleitor3Chart = dc.barChart("#eleitores-chart3");
+
+
+        d3.csv("data/coordenadas_bairros.csv").then(function (data) {
+
+      // format our data
+      let map = L.map('mapid').setView([-3.792614,-38.515877], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 18}).addTo(map);
+
+    let geoJson = L.geoJson(bairrosData, {
+      weight: 1,
+      opacity: 1,
+      color: 'green',
+      fillOpacity: 0.2
+    }).addTo(map);
+
+      data.forEach(function(d){
+          d.lat = +d.Latitude;
+          d.long = +d.Longitude;
+          d.bairro = d.Bairro;
+          d.secao = +d.Totalsecao;
+          d.aptos = +d.Aptos;
+         
+
+          let marker = L.marker([d.lat, d.long]).addTo(map);
+
+          marker.bindPopup("Bairro: " + d.bairro + "<br> Total de Seções: " + d.secao + "<br> Total de Aptos para votação: " + d.aptos);
+
+    });
+  
+  let facts = crossfilter(data);
+  
+
+// info.update = function (feat) {
+//              //console.log(feat);
+//       this._div.innerHTML = '<h5>Taxa de Homicídios</h5>' +  (feat ?
+//         '<b>' + feat.properties.NOME + '</b><br />' + ((100000 * homicidiosByName.get(feat.properties.NOME)) / populacaoByName.get(feat.properties.NOME)).toFixed(0) + ' Homicídios / 100 mil Habitantes'
+//         : 'Passe o mouse sobre um bairro');
+//   };
+      
+  });
+
+          d3.json("data/dados_secao.json").then(function (data) {
+
+          data.forEach(function(d) { 
+
+            d.zone = d.zona;
+            d.loc_votacao = d.localvotacao;
+            d.end = d.endereco;
+            d.brr = d.bairro;
+            d.eleitores = +d.aptos;
+            d.numZone = d.zona;
+            d.secao = +d.secaoprincipal;
+
+          });
+
+          let facts = crossfilter(data);
+
+          let zonaDim = facts.dimension(function (d) {
+            return d.zone;
+          });
+
+          let bairroDimension = facts.dimension(function(d) {
+            return d.brr;
+          });
+
+          let secaoDim = facts.dimension(function(d) {
+            return d.secao;
+          });
+
+          let bairroDimensionCount = bairroDimension.group().reduceSum(function (d){
+                return d.zone/d.numZone;
+            });
+
+          let eleitoresGroup = bairroDimension.group().reduceSum(function (d){
+                return d.eleitores;
+            });
+
+          let eleitoresGroup2 = zonaDim.group().reduceSum(function (d){
+                return d.eleitores;
+            });
+
+          let eleitoresGroup3 = secaoDim.group().reduceSum(function (d){
+                return d.eleitores;
+            });
+
+        
+
+      dataTable.width(1280)
+        .height(800)
+        .dimension(zonaDim)
+        .group(function(d) {
+          return "Informações";
+        })
+        .size(500)
+        .columns([
+          'secao',
+          'zone',
+          'end',
+          'loc_votacao',            
+          'brr',
+          'eleitores'])
+        .sortBy(function(d) { return d.brr; })
+        .order(d3.ascending);
+
+      bairroChart.width(1280)
+        .height(800)
+        .yAxisLabel('Quantidade de Zonas Eleitorais')
+        .x(d3.scaleBand().domain(d3.extent(data, function(d) { return d.brr; })))
+        .xUnits(dc.units.ordinal)
+        .margins({top: 40, right: 10, bottom: 200, left:40})
+        .dimension(bairroDimension)
+        .group(bairroDimensionCount)
+        .transitionDuration(100)
+        .renderlet(function(chart){
+          chart.selectAll("g.x text")
+            .attr('dx', '-100')
+            .attr('transform', "rotate(-80)");
+        })
+        .renderHorizontalGridLines(true)
+        .elasticX(true);
+
+      eleitorChart.width(1280)
+        .height(800)
+        .yAxisLabel('Quantidade de Eleitores')
+        .x(d3.scaleBand().domain(d3.extent(data, function(d) { return d.brr; })))
+        .xUnits(dc.units.ordinal)
+        .margins({top: 40, right: 10, bottom: 200, left:70})
+        .dimension(bairroDimension)
+        .group(eleitoresGroup)
+        .transitionDuration(500)
+        .ordinalColors(['red'])
+        .renderlet(function(chart){
+          chart.selectAll("g.x text")
+            .attr('dx', '-100')
+            .attr("font-family", "sans-serif")
+            .attr("font-size", "12px")
+            .attr('transform', "rotate(-80)");
+        })
+        .renderHorizontalGridLines(true)
+        .elasticX(true);
+
+      eleitor2Chart.width(1280)
+        .height(800)
+        .yAxisLabel('Quantidade de Eleitores')
+        .xAxisLabel('Zonas')
+        .x(d3.scaleLinear().domain(d3.extent(data, function(d) { return d.zone; })))
+        .xUnits(dc.units.ordinal)
+        .margins({top: 40, right: 10, bottom: 60, left:70})
+        .dimension(zonaDim)
+        .group(eleitoresGroup2)
+        .transitionDuration(500)
+        .ordinalColors(['red'])
+        .renderHorizontalGridLines(true)
+        .elasticX(true);
+
+      eleitor3Chart.width(1280)
+        .height(800)
+        .yAxisLabel('Quantidade de Eleitores')
+        .xAxisLabel('Seções')
+        .x(d3.scaleLinear().domain(d3.extent(data, function(d) { return d.secao; })))
+        .margins({top: 40, right: 10, bottom: 60, left:70})
+        .dimension(secaoDim)
+        .group(eleitoresGroup3)
+        .controlsUseVisibility(true)
+        .transitionDuration(500)
+        // .on('renderlet',function(chart){
+        //           chart.selectAll("g.x text")
+        //             .attr('dx', '-20')
+        //             .attr('dy', '-200')
+        //             .attr('transform', "rotate(-90)");
+        //         })
+        .ordinalColors(['red'])
+        .xUnits(dc.units.integers)
+        .renderHorizontalGridLines(true)
+        .elasticX(true);
+
+      dc.renderAll();
+        });
+    </script>
+
+     <!-- Bootstrap javascript files -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+</body>
+</html>

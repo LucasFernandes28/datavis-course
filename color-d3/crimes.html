@@ -141,11 +141,14 @@
     let homicidiosByName = d3.map();
     let populacaoByName = d3.map();
 
-    let uniao = [d3.csv("data/populacional.csv", function(d){ 
-    	populacaoByName.set(d.Bairro.toUpperCase(),+d.PopulacaoTotal); 
+    let uniao = [
+    d3.csv("data/populacional.csv", 
+    	function(d){
+    	    	populacaoByName.set(d.Bairro.toUpperCase(),+d.PopulacaoTotal); 
     			}), 
-    			d3.csv("data/homicidios_2012.csv", function(d){ 
-    				homicidiosByName.set(d.Bairro,+d.Homicidios); 
+    d3.csv("data/homicidios_2012.csv", 
+    	function(d){ 
+    			homicidiosByName.set(d.Bairro,+d.Homicidios); 
     			})]
 
     Promise.all(uniao).then(ready);

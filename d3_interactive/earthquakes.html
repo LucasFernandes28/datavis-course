@@ -82,7 +82,7 @@
     let timeChart = dc.lineChart("#time-chart");
 
     let markers = d3.map();
-    var markerLayer = L.layerGroup();
+    var markerLayer = L.layerGroup(); 
 
     //ids
     var idDimension, idGrouping;
@@ -207,6 +207,7 @@
            .brushOn(false)
            .elasticY(true)
            .x(d3.scaleTime().domain(d3.extent(data, function(d) { return d.dtg; })));
+           
       dataTable.width(960)
           .height(800)
           .dimension(dateDimension)
@@ -263,7 +264,7 @@
           mc = mc + 1;
           });
 
-          visibleMarkers.length = mc;
+          visibleMarkers.length = mc; 
 
           idDimension.filterFunction(function(d){
           return visibleMarkers.indexOf(d) > -1;
