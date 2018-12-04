@@ -72,6 +72,6 @@
 
 ## Projeto Final - Fortaleza Vota
 
-[USA](projeto_final/fortalvota.html)<br>
+[Fortaleza Vota](projeto_final/fortalvota.html)<br>
 
 --
